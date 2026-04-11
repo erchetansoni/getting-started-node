@@ -1,4 +1,15 @@
 # Getting started
+
+### Quick Start (Simple Run)
+To run the app locally without any external database requirement, simply run:
+```bash
+npm install
+node src/index.js
+```
+The app will use a local SQLite database file (`todo.db`) and listen on port 3000.
+
+---
+
 - Our NodeJS App is dependent on v18.20.8, you need to install the similar version
 - TCP Port 3000 is enabled in Security Group 
 
