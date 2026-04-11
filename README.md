@@ -61,12 +61,12 @@ sudo su
 
 2. Clone the app
 ```jsx
-git clone https://github.com/amigo-nishant/getting-started.git
+git clone https://github.com/erchetansoni/getting-started-node.git
 ```
 
 3. Change the directory
 ```jsx
-cd getting-started
+cd getting-started-node
 ```
 
 4. Deploy the App
