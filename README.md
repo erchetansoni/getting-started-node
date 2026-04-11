@@ -10,35 +10,47 @@ The app will use a local SQLite database file (`todo.db`) and listen on port 300
 
 ---
 
-- Our NodeJS App is dependent on v18.20.8, you need to install the similar version
-- TCP Port 3000 is enabled in Security Group 
-
 ### Install NodeJS on EC2 Ubuntu instance
-```jsx
-# Be root user for all installation
-sudo su
 
+#### 1. Update and Install Initial Dependencies 
+Run these commands first to ensure your new VM is up to date and has the tools needed to download the installers.
+
+```bash
+# Update the local package index to ensure you get the latest software versions
+sudo apt update && sudo apt upgrade -y
+
+# Install curl (used to download the Node.js setup script)
+sudo apt install -y curl ca-certificates gnupg
+```
+
+#### 2. Install Node.js (Version 24.x) and Git 
+The following block adds the NodeSource repository for the latest Active LTS (Long Term Support) version and installs both Node.js and Git.
+
+```bash
 # Download and install nvm:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 # in lieu of restarting the shell
 \. "$HOME/.nvm/nvm.sh"
 
 # Download and install Node.js:
-nvm install 18
+nvm install 24
 
-# Install yarn
-apt install cmdtest
+# Verify the Node.js version:
+node -v # Should print "v24.14.1".
+
+# Verify npm version:
+npm -v # Should print "11.11.0".
 ```
 
 ### To install NodeJS on Windows / MacOS / Linux Distribution 
 URL --> https://nodejs.org/en/download
 
 ### Verify the Node.js & npm version:
-```jsx
-node -v # Should print "v18.20.8".
-nvm current # Should print "v18.20.8".
-npm -v # Should print "10.8.2".
+```bash
+node -v # Should print "v24.14.1".
+nvm current # Should print "v24.14.1".
+npm -v # Should print "11.11.0".
 ```
 
 ### Steps to deploy Locally or on DEV environment
