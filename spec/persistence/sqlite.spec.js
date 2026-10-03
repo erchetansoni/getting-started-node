@@ -1,6 +1,8 @@
 const db = require('../../src/persistence/sqlite');
 const fs = require('fs');
-const location = process.env.SQLITE_DB_LOCATION || '/etc/todos/todo.db';
+const path = require('path');
+const location =
+    process.env.SQLITE_DB_LOCATION || path.join(__dirname, '../../data/todo.db');
 
 const ITEM = {
     id: '7aef3d7c-d301-4846-8358-2a91ec9d6be3',

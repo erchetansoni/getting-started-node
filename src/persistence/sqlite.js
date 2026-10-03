@@ -2,7 +2,7 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
 const location =
-    process.env.SQLITE_DB_LOCATION || path.join(__dirname, '../../todo.db');
+    process.env.SQLITE_DB_LOCATION || path.join(__dirname, '../../data/todo.db');
 
 let db, dbAll, dbRun;
 
