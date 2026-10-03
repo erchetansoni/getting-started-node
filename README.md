@@ -96,7 +96,7 @@ node src/index.js
 npm run dev
 ```
 
-The app will initialize a local SQLite database (`data/todo.db`) and start the server.
+The app will initialize a local SQLite database (`todo.db`) and start the server.
 
 - Open in your browser: [http://localhost:3000](http://localhost:3000)
 
