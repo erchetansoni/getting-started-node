@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> **Node.js Version Notice:**
+> - This application is able to run **only on Node.js 26**.
+> - Any references below mentioning Node.js **20.x** or **24.x** are kept **intentionally for demo purposes**.
+
+---
 # Getting started
 
 A simple Node.js Todo application with SQLite / MySQL database support.
